@@ -6,9 +6,9 @@ var endAlignment = Alignment.bottomRight;
 
 // ignore: must_be_immutable
 class GradientContainer extends StatelessWidget {
-  GradientContainer(this.startColor, this.endColor, {super.key});
-  Color startColor;
-  Color endColor;
+  const GradientContainer(this.startColor, this.endColor, {super.key});
+  final Color startColor;
+  final Color endColor;
   @override
   Widget build(context) {
     //container is a widget that allows you to customize its child widget layout and styles.

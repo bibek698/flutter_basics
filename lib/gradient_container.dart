@@ -26,6 +26,8 @@ class GradientContainer extends StatelessWidget {
 
       child: Center(
         child: Column(
+          //mainAxisSize: MainAxisSize.min, this also do center takes minimum space to fit its children, but it will not expand to fill the available space.
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
           Image.asset(
             'assets/images/dice-1.png', 
@@ -33,6 +35,10 @@ class GradientContainer extends StatelessWidget {
             ),
           TextButton(
             onPressed: rollDice, 
+            style: TextButton.styleFrom(
+              foregroundColor: Colors.white,
+              textStyle: const TextStyle(fontSize: 28),
+            ),
             child: Text('Roll Dice'),
             ),
 

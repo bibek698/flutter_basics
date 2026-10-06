@@ -8,6 +8,10 @@ class GradientContainer extends StatelessWidget {
   const GradientContainer(this.startColor, this.endColor, {super.key});
   final Color startColor;
   final Color endColor;
+
+  void rollDice(){
+
+  }
   @override
   Widget build(context) {
     //container is a widget that allows you to customize its child widget layout and styles.
@@ -20,7 +24,21 @@ class GradientContainer extends StatelessWidget {
         ),
       ),
 
-      child: Center(child: Image.asset('assets/images/dice-1.png', width: 200)),
+      child: Center(
+        child: Column(
+          children: [
+          Image.asset(
+            'assets/images/dice-1.png', 
+            width: 200
+            ),
+          TextButton(
+            onPressed: rollDice, 
+            child: Text('Roll Dice'),
+            ),
+
+
+      ],),
+      ),
     );
   }
 }
